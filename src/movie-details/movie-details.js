@@ -6,20 +6,18 @@ function getmovieName() {
 
 
 function getmovieDetails(movie) {
-    var getmovieUrl = fetch('http://www.omdbapi.com/?apikey=72122887&t=' +  movie);
+    var getmovieUrl = fetch('http://www.omdbapi.com/?apikey=ad8848b9&t=' +  movie);
     console.log("Details API: ", getmovieUrl);
     getmovieUrl.then(response => {
         return response.json();
     }).then(details => {
-        // Insert the HTML code, that are been called from the API
+
         console.log("Details: ", details);
         movieDetails.innerHTML = tableHTML(details);
     });
 }
 
-/* Passing the list of data to this function and getting a single movie data,
-   and performing Table population,
-   to get to know the details of that movie. */
+
 function tableHTML(details) {
 
 
@@ -116,8 +114,7 @@ function tableHTML(details) {
     return movieDetailTable;
 }
 
-/* Converting the Population data from the API which is '1295210000'
- changed to '1.3B', to well known understandable*/
+
 function abbrNum(number, decPlaces) {
     decPlaces = Math.pow(10,decPlaces);
     var abbrev = [ "K", "M", "B", "T" ];
@@ -137,5 +134,5 @@ function abbrNum(number, decPlaces) {
     return number + " People";
 }
 
-// Calling the function, to invoke the movie Name in the Div Tag
+
 getmovieName();
