@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freshworks Assignment</title>
+  <link rel = "stylesheet"
+        type = "text/css"
+        href = "styles.css" />
+</head>
+<body>
+<!-- Similar like nav bar -->
+  <div class="topnav">
+    <a class="active">Movie Freak</a>
+  </div>
+<div class="home-page-header-container">
+  <h1>Search the movie you want to know</h1>
+  <div class="search-container">
+    <form>
+
+      <input type="text" id="movieName" class="searchbar" placeholder="Type here" onkeyup="searchMoviesOnTypeAhead()"/>
+    </form>
+  </div>
+  <!--<button type="submit" onclick="searchmovies()" value="Search" class="submitButton">Search</button>-->
+</div>
+
+<div id="main" class="div-main"></div>
+<ul id="movies" class="ul-list"></ul>
+<script src="app.js"></script>
+</body>
+</html>
